@@ -1,0 +1,259 @@
+$main-color:#efe7de;
+$font-stack: 'Oswald', sans-serif;
+$secondary-color:#ef4b54;
+$primary-color:#36a9e1;
+$icon-color:#BA55D3;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $main-color;
+    text-decoration: none;
+    font-family: $font-stack;
+    line-height: 1.6;
+}
+
+.navbar{
+    position: fixed;
+    background-color: $main-color;
+    font-family: "Space Mono", monospace;
+    width: 100%;
+    padding: 25px 0;
+    top: 0;
+    transition: 0.3s;
+    z-index: 999;
+
+    &_container{
+        max-width: 1300px;
+        margin: auto;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    
+}
+.logo{
+   
+    height: 32px;
+    width: 39px;
+    background-image: url(../assets/img/game.png);
+    background-size: cover;
+    margin-left: -80px;
+}
+
+}
+
+.menu-toggler{
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    z-index: 999;
+
+    span{
+        display: block;
+        position: relative;
+        background-color: black;
+        height: 3px;
+        margin: 6px 0;
+        transition: 0.5s;
+        display: none;
+    }
+}
+
+.navbar-menu{
+    a:hover{
+        color: blue;
+    }
+    a{
+        color:$icon-color;//#056d38;
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: none;
+        margin-left: 30px;
+        transition: 0.5s;
+        
+
+
+    }
+}
+
+#home{
+    .home_container--left{
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        position: absolute;
+        left: 400px;
+        top: 300px;
+        //border: solid 10px #262262;
+        width: 300px;
+        
+    }
+    .content{
+        width: 100%;
+        font-family: $font-stack;
+        color:#36a9e1;
+        width: 550px;
+        padding: 10px;
+        margin:0px;
+       
+
+        h1{
+            margin-bottom: 600px;
+            .hello{
+                background-color: white;
+                font-size: 80px;
+                border: 3.5px solid black;
+                box-shadow: 3px 4px black;
+                right: 250px;
+                position: absolute;
+                line-height: 1.3;
+                padding-left: 30px;
+                padding-right: 30px;
+                top: 200px;
+                transform: rotate(-3.5deg) translateX(30%);
+                width: auto;
+                white-space: nowrap;
+            }
+            .name{
+                background-color:white;//#D8BFD8
+                font-size: 80px;
+                border: 3.5px solid black;
+                box-shadow: 3px 4px black;
+                position: absolute;
+                right: 150px;
+                line-height: 1.3;
+                padding-left: 30px;
+                padding-right: 30px;
+                top: 390px;
+                transform: rotate(1.5deg) translateX(30%);
+                width: auto;
+                white-space: nowrap;
+
+                .text--red{
+                    color: $secondary-color;
+                }
+            }
+
+            .job{
+                background-color:white;
+                font-size: 80px;
+                border: 3.5px solid black;
+                box-shadow: 3px 4px black;
+                position: absolute;
+                right: 150px;
+                line-height: 1.3;
+                padding-left: 30px;
+                padding-right: 30px;
+                top: 590px;
+                transform: rotate(-2.5deg) translateX(30%);
+                width: auto;
+                white-space: nowrap;
+            }
+
+        }
+    }
+
+    .home_container--right{
+        position: relative;
+        left: 850px;
+        top: 170px;
+        //border: solid 10px #262262;
+        width: 300px;
+
+        .frame{
+            display: flex;
+            align-items: center;
+            box-align: center;
+            padding: 2px;
+            width: 550px;
+            left: -10px;
+            top: 0px;
+            position: absolute;
+            background: rgba(174, 168, 168, 0.729);
+            border: 1px solid black;
+            .icon::after{
+                position: absolute;
+                top: 2px;
+                left: 10px;
+                content: " ";
+                width: 20px;
+                height: 15px;
+                background: url(/src/assets/img/message.png) no-repeat 50%;
+                background-size: 25px;
+            }
+            .spacer{
+                background: none;
+                width: 400px;
+                border: none;
+                padding-right: -20px;
+                position: relative;
+                outline: none;
+                z-index: 999;
+                i{
+                    display: flex;
+                    position: relative;
+                    background-color: black;
+                    height: 1px;
+                    //right: 1px;
+                    margin: 1px;
+                    transition: 0.5s; 
+                }
+            }
+            span{
+                margin-left:22px;
+                margin-right:5px;
+                margin-top: -2px;
+                font-size: 12px;
+                color: black;
+                
+            }
+    
+
+        }
+        .profile{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            box-align: center;
+            padding: 200px;
+            width: 550px;
+            left: -10px;
+            top: 20px;
+            background-image: url(/src/assets/img/profile.JPG);
+            background-size: cover;
+            height: 500px;
+            border: 1px solid black;
+        }
+        .social-logo{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px;
+            width: 550px;
+            top: 550px;
+            
+            a:hover{
+                color: blue;
+            }
+            a{
+                text-decoration: none;
+                color: $icon-color;
+                font-size: 40px;
+                margin-top: -20px;
+                transition: 0.2s;
+            }
+
+        }
+
+    }
+}
