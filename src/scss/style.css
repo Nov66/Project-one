@@ -24,7 +24,7 @@ body {
   z-index: 999;
 }
 
-.navbar_container {
+.navbar__container {
   max-width: 1300px;
   margin: auto;
   padding: 0 40px;
@@ -39,15 +39,15 @@ body {
           justify-content: space-between;
 }
 
-.navbar .logo {
-  height: 32px;
+.navbar__container__logo {
+  height: 40px;
   width: 39px;
-  background-image: url(../assets/img/game.png);
+  background-image: url(/src/assets/img/iExclamation.png);
   background-size: cover;
   margin-left: -80px;
 }
 
-.menu-toggler {
+.navbar__container__menu-toggler {
   background: none;
   width: 30px;
   border: none;
@@ -57,7 +57,7 @@ body {
   z-index: 999;
 }
 
-.menu-toggler span {
+.navbar__container__menu-toggler span {
   display: block;
   position: relative;
   background-color: black;
@@ -68,11 +68,11 @@ body {
   display: none;
 }
 
-.navbar-menu a:hover {
+.navbar__container__menu a:hover {
   color: blue;
 }
 
-.navbar-menu a {
+.navbar__container__menu a {
   color: #BA55D3;
   font-size: 20px;
   font-weight: 700;
@@ -82,7 +82,7 @@ body {
   transition: 0.5s;
 }
 
-#home .home_container--left {
+#home .home__container--left {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   position: absolute;
@@ -91,7 +91,7 @@ body {
   width: 300px;
 }
 
-#home .content {
+#home .home__container--left__content {
   width: 100%;
   font-family: "Oswald", sans-serif;
   color: #36a9e1;
@@ -100,11 +100,18 @@ body {
   margin: 0px;
 }
 
-#home .content h1 {
+#home .home__container--left__content h1 {
   margin-bottom: 600px;
 }
 
-#home .content h1 .hello {
+#home .home__container--left__content h1 .hello:hover {
+  -webkit-transform: rotate(3.5deg);
+          transform: rotate(3.5deg);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+#home .home__container--left__content h1 .hello {
   background-color: white;
   font-size: 80px;
   border: 3.5px solid black;
@@ -122,7 +129,14 @@ body {
   white-space: nowrap;
 }
 
-#home .content h1 .name {
+#home .home__container--left__content h1 .name:hover {
+  -webkit-transform: rotate(-1.5deg);
+          transform: rotate(-1.5deg);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+#home .home__container--left__content h1 .name {
   background-color: white;
   font-size: 80px;
   border: 3.5px solid black;
@@ -140,11 +154,18 @@ body {
   white-space: nowrap;
 }
 
-#home .content h1 .name .text--red {
+#home .home__container--left__content h1 .name .text--red {
   color: #ef4b54;
 }
 
-#home .content h1 .job {
+#home .home__container--left__content h1 .job:hover {
+  -webkit-transform: rotate(2.5deg) translateX(30%);
+          transform: rotate(2.5deg) translateX(30%);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+#home .home__container--left__content h1 .job {
   background-color: white;
   font-size: 80px;
   border: 3.5px solid black;
@@ -162,14 +183,14 @@ body {
   white-space: nowrap;
 }
 
-#home .home_container--right {
+#home .home__container--right {
   position: relative;
   left: 850px;
   top: 170px;
   width: 300px;
 }
 
-#home .home_container--right .frame {
+#home .home__container--right__frame {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,7 +199,7 @@ body {
           align-items: center;
   box-align: center;
   padding: 2px;
-  width: 550px;
+  width: 480px;
   left: -10px;
   top: 0px;
   position: absolute;
@@ -186,28 +207,29 @@ body {
   border: 1px solid black;
 }
 
-#home .home_container--right .frame .icon::after {
+#home .home__container--right__frame .icon::after {
   position: absolute;
   top: 2px;
-  left: 10px;
+  left: 5px;
   content: " ";
   width: 20px;
-  height: 15px;
+  height: 19px;
   background: url(/src/assets/img/message.png) no-repeat 50%;
   background-size: 25px;
 }
 
-#home .home_container--right .frame .spacer {
+#home .home__container--right__frame .spacer {
   background: none;
-  width: 400px;
+  width: 355px;
   border: none;
+  left: 25px;
   padding-right: -20px;
-  position: relative;
+  position: absolute;
   outline: none;
   z-index: 999;
 }
 
-#home .home_container--right .frame .spacer i {
+#home .home__container--right__frame .spacer i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,15 +241,15 @@ body {
   transition: 0.5s;
 }
 
-#home .home_container--right .frame span {
-  margin-left: 22px;
-  margin-right: 5px;
-  margin-top: -2px;
+#home .home__container--right__frame h2 {
+  margin-left: 380px;
   font-size: 12px;
+  font-weight: 500;
+  font-family: monospace;
   color: black;
 }
 
-#home .home_container--right .profile {
+#home .home__container--right__profile {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,17 +258,22 @@ body {
       -ms-flex-align: center;
           align-items: center;
   box-align: center;
-  padding: 200px;
-  width: 550px;
+  padding: 150px;
+  width: 480px;
   left: -10px;
-  top: 20px;
-  background-image: url(/src/assets/img/profile.JPG);
-  background-size: cover;
-  height: 500px;
-  border: 1px solid black;
+  top: 22px;
+  height: 450px;
+  border: 3px solid black;
+  background-color: #36a9e1;
 }
 
-#home .home_container--right .social-logo {
+#home .home__container--right__profile img {
+  left: 0px;
+  top: -130px;
+  position: absolute;
+}
+
+#home .home__container--right__social-logo {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -261,11 +288,11 @@ body {
   top: 550px;
 }
 
-#home .home_container--right .social-logo a:hover {
+#home .home__container--right__social-logo a:hover {
   color: blue;
 }
 
-#home .home_container--right .social-logo a {
+#home .home__container--right__social-logo a {
   text-decoration: none;
   color: #BA55D3;
   font-size: 40px;
