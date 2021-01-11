@@ -1,0 +1,78 @@
+// media aliases and breakpoints
+$screen-sm-min: 600px;
+$screen-md-min: 960px;
+$screen-lg-min: 1280px;
+$screen-xl-min: 1920px;
+
+$screen-xs-max: 599px;
+$screen-sm-max: 959px;
+$screen-md-max: 1279px;
+$screen-lg-max: 1919px;
+$screen-xl-max: 5000px;
+
+@media screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}){
+    .navbar{
+        &__container{
+            position: fixed;
+            &__logo{
+                margin-left: -20px;
+            }
+    
+            &__menu-toggler{
+                left: 850px;
+            }
+
+            .menu-toggler--active{
+                span:nth-child(1){
+                    transform: rotate(-45deg);
+                    top: 4px;
+                }
+                span:nth-child(2){
+                    opacity: 0;
+                }
+                span:nth-child(3){
+                    transform: rotate(45deg);
+                    bottom: 14px;
+                }
+        
+            }
+    
+            &__menu{
+                position: fixed;
+                height: 100vh;
+                width: 100%;
+                background-color: white;
+                top: 0px;
+                right: -100%;
+                max-width: 450px;
+                padding:80px 50px;
+                transition: 0.5s ease-in-out;
+                
+                a{
+                    display: block;
+                    font-size:40px;
+                    text-transform: uppercase;
+                    border-bottom:1.5px solid #c8cbcb;
+                    margin: 35px 0;
+                    
+                    }
+            }
+            .menu--active{
+                right: 0px;
+                
+            }
+            
+    
+        
+    }
+
+    #home{
+        .home__container{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: $screen-sm-max;
+        }
+    }
+    
+}
+}
